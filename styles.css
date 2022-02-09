@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -6,8 +8,10 @@
 body {
   height: 100vh;
 
+  font-family: 'Roboto', cursive;
+
   display: grid;
-  grid-template-rows: 2fr 4fr 3fr;
+  grid-template-rows: 2fr 5fr 4fr;
   grid-template-columns: 350px auto 350px;
 }
 
@@ -36,3 +40,62 @@ header {
 #trending-section {
   background-color: #38bdf8;
 }
+
+/* sidebar styles start here */
+
+#sidebar {
+  display: grid;
+  grid-template-rows: 150px 6fr 8fr;
+
+  background-color: #1992d4;
+}
+
+#navigation,
+#branding {
+  display: grid;
+}
+
+#navigation {
+  grid-template-rows: repeat(6, 50px);
+}
+
+#branding {
+  grid-template-rows: repeat(3, 50px);
+}
+
+#sidebar,
+#sidebar a {
+  color: white;
+  font-weight: 600;
+}
+
+#sidebar h2,
+#sidebar a {
+  display: flex;
+  align-items: center;
+}
+
+#sidebar h2 {
+  font-size: 2.2rem;
+}
+
+#sidebar h2 img {
+  width: 50px;
+}
+
+#sidebar img {
+  filter: invert(100%);
+
+  margin: 10px 30px;
+}
+
+#sidebar a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+#sidebar a:hover {
+  background-color: hsl(201, 79%, 42%);
+}
+
+/* Sidebar styles end here */
