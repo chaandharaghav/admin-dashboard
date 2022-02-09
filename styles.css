@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: 2fr 4fr 3fr;
+  grid-template-columns: 350px auto 350px;
+}
+
+header {
+  background-color: #fb923c;
+
+  grid-column: 2/4;
+}
+
+#sidebar {
+  background-color: #d946ef;
+
+  grid-row: 1/4;
+}
+
+#project-section {
+  background-color: #a3e635;
+
+  grid-row: 2/4;
+}
+
+#announcement-section {
+  background-color: #34d399;
+}
+
+#trending-section {
+  background-color: #38bdf8;
+}
