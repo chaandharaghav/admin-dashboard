@@ -221,9 +221,12 @@ h1 {
 
 /* Project styles start here */
 
-#project-section {
+#project-section,
+#announcement-section {
   background-color: #e2e8f0;
+}
 
+#project-section {
   padding: 2rem 1.5rem;
 
   overflow-y: scroll;
@@ -234,7 +237,8 @@ h1 {
   display: none;
 }
 
-#project-section h3 {
+#project-section h3,
+#announcement-section h3 {
   margin-bottom: 1rem;
 }
 
@@ -244,6 +248,12 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 250px;
   gap: 2rem;
+}
+
+.project-card,
+#announcement-list {
+  -webkit-box-shadow: 9px 9px 32px -16px #000000;
+  box-shadow: 4px 4px 22px -16px #000000;
 }
 
 .project-card {
@@ -260,11 +270,15 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.project-card p {
+.project-card p,
+.announcement-info {
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+.project-card p {
+  -webkit-line-clamp: 5;
 }
 
 .card-actions {
@@ -277,4 +291,31 @@ h1 {
 .card-actions button {
   background-color: white;
   border: none;
+}
+
+/* Announcement section styles begin here */
+
+#announcement-section {
+  padding-top: 2rem;
+}
+
+#announcement-list {
+  background-color: white;
+
+  width: 90%;
+  border-radius: 10px;
+
+  padding: 0 2rem;
+}
+
+.announcement {
+  padding: 20px 0;
+}
+
+.announcement:not(:last-of-type) {
+  border-bottom: 1px solid grey;
+}
+
+.announcement-info {
+  -webkit-line-clamp: 3;
 }
